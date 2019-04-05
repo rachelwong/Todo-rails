@@ -1,0 +1,31 @@
+<div class="container">
+<p id="notice"><%= notice %></p>
+
+<h1> Rachel's Todos List App</h1>
+
+<table class="table table-striped table-bordered table-hover">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="row">Title</th>
+      <th scope="row">Notes</th>
+      <th scope="row" colspan="3">Functionalities</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @todos.each do |todo| %>
+      <tr>
+        <td><%= todo.title %></td>
+        <td><%= todo.notes %></td>
+        <td><%= link_to 'Show', todo, class: "btn btn-primary" %></td>
+        <td><%= link_to 'Edit', edit_todo_path(todo), class:"btn btn-warning" %></td>
+        <td><%= link_to 'Destroy', todo, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger"%></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Todo', new_todo_path, class: "btn btn-success new" %>
+</div><!--end container-->

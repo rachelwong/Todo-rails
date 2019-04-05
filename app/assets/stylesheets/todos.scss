@@ -1,0 +1,27 @@
+// Place all the styles related to the Todos controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap";
+
+.container{
+    margin:0 auto;
+}
+
+.container h1{
+    text-align:center;
+    padding: 10px 0;
+}
+.container > * {
+    margin:0 auto;
+}
+
+a.new {
+    float:right;
+}
+
+div.form-group{
+    margin:0 auto;
+    border:1px solid pink;
+    width:50%;
+}
+
